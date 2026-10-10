@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Program35
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            int value = 1;
+            int shift = 4;
+            int result = value << shift;
+
+            // Получаем двоичную строку и дополняем до 8 символов нулями слева
+            string binary = Convert.ToString(result, 2).PadLeft(8, '0');
+
+            Console.WriteLine($"1 << {shift} = {result}");
+            Console.WriteLine($"Двоичный вид (8 младших бит): {binary}");
+        }
+    }
+}
